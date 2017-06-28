@@ -1,30 +1,32 @@
-import React, {Component} from 'react'
+/**
+ */
+import React, {Component} from 'react';
 
 class MyForm extends Component{
-    constructor(props) {
+    constructor(props){
         super(props);
-        this.state = {
-            value: ''
-        }
-        this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleChange = this.handleChange.bind(this)
-    }
+        this.state = {value: ''};
 
-    handleSubmit(event){
-        console.log("User submitted the form " + this.state.value)
-        event.preventDefault()
-    }
-
-    handleChange(event){
-        console.dir(event.target);
-        this.setState({
-            value: event.target.value
-        })
-        console.log("User changed input box to " + this.state.value)
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
 
     }
+
+    handleChange(event) {
+        //console.dir(event);
+        this.setState({value: event.target.value});
+        //console.log('user changed input box, added: ' + event.target.value)
+
+    }
+
+    handleSubmit(event) {
+        console.log('User submitted form: ');
+        event.preventDefault();
+    }
+
 
     render() {
+        console.log(this.state.value)
         return (
             <form onSubmit={this.handleSubmit}>
                 <label>
@@ -37,4 +39,5 @@ class MyForm extends Component{
     }
 }
 
-export default MyForm
+
+export default MyForm;

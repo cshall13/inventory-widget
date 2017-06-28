@@ -1,13 +1,19 @@
 import React, {Component} from 'react'
 
 class Toggle extends Component{
+    // initializes the 'this'
     constructor(props){
+        // initializes the component. if you use constructor you must use super
         super(props);
+        // #####################only difference between this.state and any variable is that when it is
+        // changed, React calls render again
         this.state = {
             toggleOn: true
         }
-   // **** the 'this' on handleClick is referring to the "this class(above it)"??maybe****
-   //      this 'this' does not apply to the function
+   // **** the 'this' on handleClick is referring to the "this class(above it)"****
+   //      this 'this' does not apply to the function because the function has no state. the class has state
+   //      bind makes keyword 'this' work in the callback, (meaning wherever handleClick is run,
+   //      it is going to run the 'this' as it exists on line 17)
         this.handleClick = this.handleClick.bind(this)
     }
 

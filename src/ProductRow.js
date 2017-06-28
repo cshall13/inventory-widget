@@ -1,4 +1,5 @@
-// Required Dependencies
+// Required Dependencies/Things other people made
+
 import React, { Component } from 'react';
 
 class ProductRow extends Component{

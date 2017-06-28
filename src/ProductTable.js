@@ -1,4 +1,4 @@
-// Required Dependencies
+// Required Dependencies/Things other people made
 import React, { Component } from 'react';
 import ProductCategoryRow from './ProductCategoryRow.js';
 import ProductRow from './ProductRow.js';
@@ -23,6 +23,7 @@ class ProductTable extends Component{
             }
             rows.push(<ProductRow key={key} randomThing={currProduct} />)
             key++;
+            return null
         });
         console.log(rows);
 

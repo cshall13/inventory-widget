@@ -1,4 +1,5 @@
-// Required Dependencies
+// Required Dependencies/Things other people made
+
 import React, { Component } from 'react';
 import SearchBar from './SearchBar.js';
 import ProductTable from './ProductTable.js';
